@@ -33,41 +33,22 @@
 
 // div.innerHTML : {a.innerHTML : a.href}
 var sites = {
-			"Chan": {
-				"4/wsg/"			: "https://boards.4chan.org/wsg/",
-				"4/b/"				: "https://boards.4chan.org/b/",
-				"4/sci/"			: "https://boards.4chan.org/sci/",
-				"8/b/"				: "https://8ch.net/b/index.html"
-			},
 			"Social": {
-				"GitLab"			: "https://gitlab.com/Capuno",
-				"Racó Català"		: "https://www.racocatala.cat/forums",
+                "Discord"     : "https://discordapp.com",
+                "Messenger"   : "https://messenger.com",
+				"Github"			: "https://github.com/dylan-robins",
 				"YouTube"			: "https://www.youtube.com/",
-				"Twitter"			: "https://twitter.com/"
 			},
-			"E-Mail": {
-				"GMail"				: "https://mail.google.com/mail/u/0/",
-				"Hotmail"			: "https://outlook.live.com/owa/",
-				"Zoho Mail"			: "https://mail.zoho.eu/zm/#mail/folder/inbox"
-			},
-			"Games": { // To find the game ID check the url in the store page or the community page
-				"CS:GO"				: "steam://run/730",
-				"Besiege"			: "steam://run/346010",
-				"Rust"				: "steam://run/252490",
-				"Insurgency"		: "steam://run/222880",
-				"West of Loathing"	: "steam://run/597220",
-				"POSTAL 2"			: "steam://run/223470"
-			},
-			"News": {
-				"Financial Times"	: "https://www.ft.com/",
-				"Vilaweb"			: "https://www.vilaweb.cat/",
-				"El Punt Avui"		: "http://www.elpuntavui.cat/barcelona.html"
+			"Work": {
+				"Gmail"				: "https://mail.google.com/mail/u/0/",
+                "UGA mail"    : "https://webmail.etu.univ-grenoble-alpes.fr/mail",
+                "Drive"       : "https://drive.google.com/drive/",
+                "Calendar"       : "https://calendar.google.com/calendar/r"
 			},
 			"My stuff": {
-				"capuno.cat"		: "https://capuno.cat/",
-				"gnu.cat"			: "https://gnu.cat/",
-				"life"				: "https://life.capuno.cat/",
-				"rice"				: "https://rice.capuno.cat/"
+                "Music"          : "https://play.google.com/music/listen#/home",
+                "localhost:5000" : "http://localhost:5000",
+                "localhost:8000" : "http://localhost:8000"
 			}
 		};
 
