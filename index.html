@@ -50,10 +50,13 @@
 
 	<div id="main" style="max-width: 912px;">
 		<span style="display: block">
+            <div id="clock">
+                <!-- dome.js: displayDate() fills this element -->
+            </div>
 			<div id="static_links">
-				<span id="clock">
-					<!-- dome.js: displayDate() fills this element -->
-				</span>
+                <span>
+                    Duck Duck Go
+                </span>
 			</div>
 			<form method="GET" id="action">
 				<input type="text" oninput="matchLinks(this.value)" autofocus autocomplete="off">
