@@ -53,8 +53,8 @@ var sites = {
 			}
 		};
 
-var search = "https://google.fr/";		    // The search engine
-var query  = "q";							// The query variable name for the search engine
+var search = "https://google.fr/search";	// The search engine
+var query  = "q";						// The query variable name for the search engine
 
 var pivotmatch = 0;
 var totallinks = 0;
