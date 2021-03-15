@@ -45,6 +45,9 @@ document.addEventListener("keydown", (e) => {
         save_content(e);
         e.preventDefault();
         return false;
+    } else if (e.keyCode === 13) {
+        // save on every newline
+        save_content(e);
     }
 }, false);
 
