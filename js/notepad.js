@@ -40,7 +40,7 @@ window.onload = () => {
 
 // Add event listener to save page content regularly
 document.addEventListener("keydown", (e) => {
-    if (e.keyCode === 83) {
+    if ((e.metaKey || e.ctrlKey) && e.keyCode === 83) {
         // capture ctrl-s keystroke and map it to save content instead on browser default
         save_content(e);
         e.preventDefault();
