@@ -41,3 +41,17 @@ body {
 	margin          : 0;
 	background-color: var(--bkg);
 }
+
+.right {
+	text-align: right;
+	padding: 1em;
+	color: var(--htx);
+	fill: var(--htx);
+}
+
+/* Reset anchor tags in footer */
+#footer > a {
+	display:block
+    text-decoration: inherit;
+    color: inherit;
+}

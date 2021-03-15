@@ -6,23 +6,17 @@ body {
 }
 
 main {
-    margin: 0 auto 1.5em auto;
+    margin: 0 auto 0 auto;
     width: clamp(16rem, 90vw, 70rem);
 }
 
 #content {
     font-size: 1.1rem;
-    min-height: calc(100vh - 6em - 1.4pt - 2em);
+    min-height: calc(100vh - 10em);
     background-color: var(--frg);
     outline: none;
     border-radius: 0.2em;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     padding: 1.5em;
     line-height: 1.4;
-}
-
-#timestamp {
-    text-align: right;
-    line-height: 1.4;
-    color: var(--htx);
 }
