@@ -53,6 +53,7 @@ var sites = {
 		"Sheets": "https://sheets.google.com"
 	},
 	"Other stuff": {
+		"Notepad": "/notepad",
 		"localhost:5000": "http://localhost:5000",
 		"localhost:8000": "http://localhost:8000"
 	}

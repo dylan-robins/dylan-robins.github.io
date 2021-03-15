@@ -1,0 +1,43 @@
+:root {
+	/* 
+	Atom One Dark by Daniel Gamage
+	Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+	*/
+	--base   : #282c34;
+	--mono-1 : #abb2bf;
+	--mono-2 : #818896;
+	--mono-3 : #5c6370;
+	--hue-1  : #56b6c2;
+	--hue-2  : #61aeee;
+	--hue-3  : #c678dd;
+	--hue-4  : #98c379;
+	--hue-5  : #e06c75;
+	--hue-5-2: #be5046;
+	--hue-6  : #d19a66;
+	--hue-6-2: #e6c07b;
+
+	/* Header Background Color */
+	--hdr: var(--base);
+	/* Background Color */
+	--bkg: #21252B;
+	/* Foreground Color */
+	--frg: var(--base);
+	/* Highlight Color */
+	--hgl: var(--hue-4);
+
+	/* Header Text Color */
+	--htx: var(--mono-3);
+	/* Text Color */
+	--txt: var(--mono-1);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+html,
+body {
+	font-family     : -apple-system, BlinkMacSystemFont, "Open Sans", "Calibri", "Arial", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-weight     : 400;
+	overflow-x      : hidden;
+	margin          : 0;
+	background-color: var(--bkg);
+}

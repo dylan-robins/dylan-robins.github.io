@@ -1,0 +1,172 @@
+div#wiper {
+	opacity: 0 !important;
+	z-index: -1 !important;
+}
+
+main {
+	transform          : translate(-50%, -50%);
+	text-align         : center;
+	position           : absolute;
+	left               : 50%;
+	top                : 40%;
+	transition         : 1s transform;
+	max-height         : 90vh;
+	-webkit-user-select: none;
+	-khtml-user-select : none;
+	-moz-user-select   : none;
+	user-select        : none;
+	transition         : .2s height;
+	max-width: 912px;
+}
+
+main>span>div#static_links {
+	background-color: var(--hdr);
+	margin          : 2px 2px 0px 2px;
+	box-sizing      : border-box;
+	color           : var(--txt)22;
+	padding-right   : 7px;
+	padding-left    : 5px;
+	line-height     : 30px;
+	text-align      : right;
+	font-size       : 16px;
+	border          : none;
+	width           : 908px;
+	height          : 30px;
+}
+
+main>span>div#static_links>span:first-of-type {
+	color: var(--htx);
+	float: left;
+}
+
+main>span>div#static_links>a {
+	text-decoration: none;
+	color          : var(--htx);
+}
+
+main>span>div#static_links>a:hover {
+	color: white;
+}
+
+main>span>div#static_links>a+a {
+	margin-left: 15px;
+}
+
+main>span>form>input {
+	background-color: var(--frg);
+	margin          : 0px 2px 2px 2px;
+	box-sizing      : border-box;
+	color           : var(--txt);
+	padding-left    : 5px;
+	font-size       : 40px;
+	border          : none;
+	width           : 908px;
+	height          : 50px;
+}
+
+main>span>form>input:focus {
+	outline: none;
+}
+
+@media screen and (max-width: 912px) {
+
+	main>span>form>input,
+	main>span>div#static_links {
+		width: 604px;
+	}
+}
+
+@media screen and (max-width: 608px) {
+
+	main>span>form>input,
+	main>span>div#static_links {
+		width: 300px;
+	}
+}
+
+div#links>div.section {
+	background-color: var(--hdr);
+	box-sizing      : border-box;
+	display         : inline-block;
+	vertical-align  : top;
+	text-align      : left;
+	height          : 200px;
+	width           : 300px;
+	margin          : 2px;
+	overflow        : hidden;
+	color           : var(--htx);
+	outline: none;
+	border-radius: 0.2em;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+div#links>div.section:before {
+	content    : "";
+	margin-left: 5px;
+}
+
+div#links>div.section>div {
+	padding         : 15px;
+	background-color: var(--frg);
+	height          : 100%;
+}
+
+div#links>div.section>div>a {
+	text-decoration: none;
+	color          : var(--txt);
+	display        : block;
+}
+
+div#links>div.section>div>a:hover {
+	background-color: rgba(255, 255, 255, .1);
+	color           : var(--hgl);
+}
+
+div#links>div.section>div>a.selected {
+	background-color: rgba(255, 255, 255, .1);
+	color           : var(--hgl);
+}
+
+div#links>div.section>div>a+a {
+	margin-top: 5px;
+}
+
+div#clock {
+	font-size    : 50pt;
+	color        : var(--txt);
+	text-align   : center;
+	margin-bottom: 1em;
+	font-weight  : 300;
+}
+
+main>span>div#static_links {
+	height: 30px;
+}
+
+main>span>form>input {
+	border: none;
+	height: 50px;
+}
+
+div#links>div.section {
+	display       : inline-block;
+	vertical-align: top;
+	height        : 200px;
+	width         : 300px;
+	margin        : 2px;
+}
+
+div#links>div.section>div {
+	padding: 15px;
+}
+
+div#wiper {
+	display         : block;
+	position        : fixed;
+	width           : 100vw;
+	height          : 100vh;
+	background-color: #121B18;
+	opacity         : 1;
+	z-index         : 100;
+	transition      : .5s opacity .5s, .5s z-index .5s;
+}
