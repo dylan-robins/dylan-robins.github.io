@@ -20,3 +20,8 @@ main {
     padding: 1.5em;
     line-height: 1.4;
 }
+
+#content > div {
+    margin-bottom: 1rem;
+    border: 1px dotted var(--base);
+}

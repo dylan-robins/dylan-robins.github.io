@@ -22,7 +22,13 @@ const get_stored_content = () => {
 const save_content = (e) => {
     last_saved_time = new Date();
     window.localStorage['timestamp'] = last_saved_time.toLocaleString('en-gb');
-    window.localStorage['content'] = document.getElementById("content").innerHTML;
+    // don't save empty divs
+    html = document.getElementById("content").innerHTML
+    if (html != "<div></div>" && html != "<br>") {
+        window.localStorage['content'] = html;
+    } else {
+        window.localStorage['content'] = "";
+    }
     reset_last_modified(last_saved_time.toLocaleString('en-gb'));
 };
 
@@ -48,6 +54,13 @@ document.addEventListener("keydown", (e) => {
     } else if (e.keyCode === 13) {
         // save on every newline
         save_content(e);
+    }
+
+    if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey && e.key !== "Escape") {
+        content_node = document.getElementById("content");
+        if (content_node.innerHTML == "" || content_node.innerHTML == "<br>") {
+            content_node.innerHTML = "<div></div>";
+        }
     }
 }, false);
 
