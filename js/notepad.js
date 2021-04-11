@@ -1,4 +1,22 @@
-let last_saved_time = new Date();
+let selected_tab = null;
+
+const select_tab = (tab_list, tab_to_select, nosave=false) => {
+    if (!nosave) {
+        // save content on current tab
+        save_content();
+    }
+
+    // change selected tab
+    for (const other_tab of tab_list) {
+        other_tab.classList.remove("selected");
+    }
+    tab_to_select.classList.add("selected");
+    
+    selected_tab = tab_to_select;
+
+    // load content of new selected tab
+    get_stored_content();
+};
 
 const reset_last_modified = (time) => {
     let msg = "Last saved: ";
@@ -8,14 +26,20 @@ const reset_last_modified = (time) => {
         msg += "never";
     }
     document.getElementById("timestamp").innerHTML = msg;
-}
+};
 
 const get_stored_content = () => {
-    last_modified = window.localStorage['timestamp'];
-    saved_content = window.localStorage['content'];
-    reset_last_modified(last_modified);
-    if (last_modified) {
-        document.getElementById("content").innerHTML = saved_content;
+    if (window.localStorage.getItem('content_' + selected_tab.innerText) === null) {
+        // Tab didn't previously exist. Load empty text area
+        document.getElementById("content").innerHTML = "";
+    } else {
+        // Tab exists. Load content from local storage
+        last_modified = window.localStorage['timestamp'];
+        saved_content = window.localStorage['content_' + selected_tab.innerText];
+        reset_last_modified(last_modified);
+        if (last_modified) {
+            document.getElementById("content").innerHTML = saved_content;
+        }
     }
 };
 
@@ -25,9 +49,9 @@ const save_content = (e) => {
     // don't save empty divs
     html = document.getElementById("content").innerHTML
     if (html != "<div></div>" && html != "<br>") {
-        window.localStorage['content'] = html;
+        window.localStorage['content_' + selected_tab.innerText] = html;
     } else {
-        window.localStorage['content'] = "";
+        window.localStorage['content_' + selected_tab.innerText] = "";
     }
     reset_last_modified(last_saved_time.toLocaleString('en-gb'));
 };
@@ -38,11 +62,6 @@ const set_edited_flag = () => {
         timestamp_p.innerHTML += " ✎";
     }
 }
-
-// load previous content when the page loads up
-window.onload = () => {
-    get_stored_content();
-};
 
 // Add event listener to save page content regularly
 document.addEventListener("keydown", (e) => {
@@ -67,3 +86,25 @@ document.addEventListener("keydown", (e) => {
 document.getElementById("content").addEventListener("input", function() {
     set_edited_flag();
 }, false);
+
+
+// load previous content when the page loads up
+window.onload = () => {
+    // FOR LEGACY SUPPORT
+    // Update old localStorage key to new ones
+    if (window.localStorage.getItem('content') !== null) {
+        console.warn("Updating old localStorage key to new naming convention");
+        window.localStorage['content_1'] = window.localStorage['content'];
+    }
+
+    // add event listeners to each tab on the page
+    const tabs = document.getElementsByClassName("button");
+    for (const tab of tabs) {
+        tab.addEventListener("click", () => {
+            select_tab(tabs, tab);
+        });
+    }
+    // select first tab
+    selected_tab = tabs[0];
+    select_tab(tabs, tabs[0], nosave=true);
+};
