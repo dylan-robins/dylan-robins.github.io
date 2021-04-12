@@ -92,7 +92,10 @@ document.getElementById("content").addEventListener("input", function() {
 window.onload = () => {
     // FOR LEGACY SUPPORT
     // Update old localStorage key to new ones
-    if (window.localStorage.getItem('content') !== null) {
+    if (
+        window.localStorage.getItem('content') !== null
+        && window.localStorage.getItem('content_1') === null
+    ) {
         console.warn("Updating old localStorage key to new naming convention");
         window.localStorage['content_1'] = window.localStorage['content'];
     }
