@@ -33,18 +33,18 @@
 
 // div.innerHTML : {a.innerHTML : a.href}
 var sites = {
-	"Common": {
+	"Social": {
 		"Gmail": "https://mail.google.com/mail/u/0/",
 		"Discord": "https://discordapp.com",
 		"Reddit": "https://reddit.com",
 		"Github": "https://github.com/dylan-robins",
 		"YouTube": "https://www.youtube.com/"
 	},
-	"Work": {
+	"Tools": {
 		"Calendar": "https://calendar.google.com/calendar/r",
-		"UGA mail": "https://webmail.etu.univ-grenoble-alpes.fr/mail",
-		"Chamilo": "https://chamilo.univ-grenoble-alpes.fr/",
-		"Circuit Designer": "http://falstad.com/circuit/circuitjs.html"
+		"ChatGPT": "https://chat.openai.com",
+		"Photopea": "https://www.photopea.com/",
+		"Music": "https://music.youtube.com/"
 	},
 	"Google Drive": {
 		"Drive": "https://drive.google.com/drive/",
@@ -54,6 +54,7 @@ var sites = {
 	},
 	"Other stuff": {
 		"Notepad": "/notepad",
+		"Ilaye": "/ilaye",
 		"localhost:5000": "http://localhost:5000",
 		"localhost:8000": "http://localhost:8000"
 	}
